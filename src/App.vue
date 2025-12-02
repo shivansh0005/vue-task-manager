@@ -1,15 +1,20 @@
 <template>
   <main class="app">
     <h1>Vue Task Manager</h1>
-
+<AddTask @add-task="handleAddTask"/>
     <div id="app-root">
-      <!-- Components will be added here -->
+      
     </div>
   </main>
 </template>
 
 <script setup>
-// intentionally empty for now
+
+import AddTask from './components/AddTask.vue';
+
+function handleAddTask(text){
+  console.log(" Task Added:",text);
+}
 </script>
 
 <style>
