@@ -24,7 +24,7 @@
     Pending
   </button>
 </div>
-
+<div class="task-list">
  <TaskItem
       v-for="t in filteredTasks"
       :key="t.id"
@@ -32,6 +32,7 @@
       @toggle-task="toggleTask(t.id)"
       @delete-task="deleteTask(t.id)"
     />
+    </div>
     <div id="app-root">
       
     </div>
@@ -77,16 +78,55 @@ function deleteTask(id) {
 </script>
 
 <style>
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.filters button {
+  padding: 8px 16px;
+  background: #333;
+  color: #eee;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.filters button:hover {
+  background: #444;
+}
+
+.filters button.active {
+  background: #42b983;
+  color: #fff;
+}
+
 body {
   margin: 0;
   background: #111;
   color: #eee;
   font-family: system-ui, sans-serif;
 }
+.task-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .app {
+  
   max-width: 700px;
   margin: 40px auto;
   padding: 0 20px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
 }
 
 .filters {

@@ -41,30 +41,41 @@ const emit=defineEmits(["toggle-task","delete-task"]);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
-  padding: 12px;
-  margin-bottom: 12px;
+  background: #2a2a2a;
+  padding: 12px 16px;
   border-radius: 6px;
+  transition: 0.2s;
+}
+
+.task-item:hover {
+  background: #333;
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.completed span {
+.task-item.completed span {
   text-decoration: line-through;
   opacity: 0.6;
 }
 
 button {
-  background: red;
+  background: #e74c3c;
   color: white;
   border: none;
   padding: 6px 10px;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
 }
+
+button:hover {
+  opacity: 0.85;
+}
+
 </style>
 

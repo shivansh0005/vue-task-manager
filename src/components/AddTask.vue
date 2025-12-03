@@ -53,39 +53,38 @@ function submit () {
 
 <style scoped>
 
-.add-task{
-    display:flex;
-    gap:10px;
-    margin-bottom:20px;
-
+.add-task {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-input{
-
-    flex:1;
-    padding:10px;
-    border-radius:4px;
-    border:none;
-    outline:none;
-
-
+.add-task input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #2a2a2a;
+  color: #fff;
 }
 
-button{
-    padding:10px 16px;
-    background: #42b983;
-    border:none;
-    color:#fff;
-    border-radius: 4px;
-    cursor:pointer;
-    font-weight: bold;
-
-}
-button:hover{
-   opacity:0.9;
+.add-task button {
+  padding: 12px 20px;
+  background: #42b983;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
-
+.add-task button:hover {
+  opacity: 0.9;
+}
 
 </style>
 
